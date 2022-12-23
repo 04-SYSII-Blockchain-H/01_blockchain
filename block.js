@@ -26,9 +26,14 @@ class Block{
     static mineBlock(lastBlock, ownData) { // weitere Blocks in der Chain
         const timestamp = Date.now(); // Zeit im ms seit 01.01.1970
         const lastHash = lastBlock.hash; // Hashwert des Vorgängers
-        const hash = "ownHash";
+        const hash = Block.hash(timestamp,lastHash, ownData); // aktueller Hash
 
         return new this(timestamp, lastHash, hash, ownData); // call constructor
+     }
+    
+     static hash(timestamp, lastHash, ownData){
+        return SHA256(`${timestamp}${lastHash}${ownData}`).toString();
+
      }
 
 }

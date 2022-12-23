@@ -12,7 +12,7 @@ const Block = require("./block");
 // const block = new Block("aktuelle Zeit", "hash1", "hash2", "meineDaten");
 // console.log(block.toString());
 
-console.log(Block.genesis().toString());
+//console.log(Block.genesis().toString());
 
 const testBlock = Block.mineBlock(Block.genesis(), "testData");
 console.log(testBlock.toString());

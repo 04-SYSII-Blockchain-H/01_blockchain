@@ -1,22 +1,19 @@
-
-
-
+// Import
 const Block = require("./block");
 
 class Blockchain{
-    consturtor(){
+
+    constructor(){
         // Array m. Genesis-Block [0]
         this.chain = [Block.genesis()];
     }
 
-addBlock(){
-    const lastBlock = this.chain[this.chain.length - 1];
-    const block = new Block.mineBlock(lastBlock, blockData);
-    this.chain.push(block);
-}
-
-
-
+    addBlock(blockData){
+        // index = arr.length - 1
+        const lastBlock = this.chain[this.chain.length-1];
+        const block = Block.mineBlock(lastBlock,blockData);
+        this.chain.push(block);
+    }
 }
 
 // Export

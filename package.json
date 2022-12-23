@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "BlockChain-Projekt",
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-test": "nodemon dev-test"
+   },
+  
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/04-SYSII-BlockchainProject/01_blockchain.git"
@@ -16,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/04-SYSII-BlockchainProject/01_blockchain/issues"
   },
-  "homepage": "https://github.com/04-SYSII-BlockchainProject/01_blockchain#readme"
+  "homepage": "https://github.com/04-SYSII-BlockchainProject/01_blockchain#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
